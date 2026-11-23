@@ -1,0 +1,19 @@
+@startuml
+title Grafo de fluxo — autenticar() (legado)
+start
+:N1 Entrada;
+:N2 conexao = abrirConexao();
+:N3 monta SQL por concatenação;
+partition try {
+  :N4 cria Statement e executa consulta;
+}
+if (exceção em N4?) then (sim)
+  :N7 catch: erro ignorado;
+else (não)
+  if (N5 resultado.next()?) then (sim)
+    :N6 atualiza ultimoUsuario\ne autenticado = true;
+  endif
+endif
+:N8 return autenticado;
+stop
+@enduml

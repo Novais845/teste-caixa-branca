@@ -1,0 +1,14 @@
+@startuml
+title Grafo de fluxo — abrirConexao() (legado)
+start
+:N1 Entrada;
+:N2 conexao = null;
+partition try {
+  :N3 DriverManager.getConnection(url);
+}
+if (exceção em N3?) then (sim)
+  :N4 catch: erro ignorado;
+endif
+:N5 return conexao;
+stop
+@enduml

@@ -1,0 +1,10 @@
+PASSOU: credenciais validas
+PASSOU: credenciais invalidas
+PASSOU: usuario vazio
+PASSOU: senha nula
+PASSOU: falha no repositorio
+5 testes aprovados.
+PASSOU: legado retorna null sem driver
+PASSOU: legado engole falha de conexao
+PASSOU: legado concatena injecao SQL
+3 testes do legado aprovados.
